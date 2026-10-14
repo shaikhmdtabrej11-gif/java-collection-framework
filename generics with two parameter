@@ -1,0 +1,38 @@
+
+public class Main {
+
+    public static <T> void display(T value) {
+        System.out.println(value);
+    }
+
+    public static void main(String[] args) {
+        display(100);
+        display("Tabrej");
+        display(25.5);
+        display(true);
+    }
+}
+
+class Student<T, U> {
+    T name;
+    U rollNo;
+
+    Student(T name, U rollNo) {
+        this.name = name;
+        this.rollNo = rollNo;
+    }
+
+    void display() {
+        System.out.println("Name: " + name);
+        System.out.println("Roll No: " + rollNo);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student<String, Integer> s1 =
+                new Student<>("Tabrej", 101);
+
+        s1.display();
+    }
+}

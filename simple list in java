@@ -1,0 +1,15 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        List<String> names = new ArrayList<>();
+
+        names.add("Tabrej");
+        names.add("Rahul");
+        names.add("Aman");
+        names.add("Rahul");
+
+        System.out.println(names);
+    }
+}

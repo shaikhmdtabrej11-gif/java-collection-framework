@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Set<Integer> numbers = new HashSet<>();
+
+        System.out.println(numbers.isEmpty());
+
+        numbers.add(100);
+
+        System.out.println(numbers.isEmpty());
+
+        numbers.clear();
+
+        System.out.println(numbers.isEmpty());
+    }
+}

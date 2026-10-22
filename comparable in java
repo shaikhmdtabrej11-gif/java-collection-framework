@@ -1,0 +1,45 @@
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+class Student implements Comparable<Student> {
+    int id;
+    String name;
+    int marks;
+
+    Student(int id, String name, int marks) {
+        this.id = id;
+        this.name = name;
+        this.marks = marks;
+    }
+
+    // Natural ordering by marks
+    @Override
+    public int compareTo(Student other) {
+        return Integer.compare(this.marks, other.marks);
+    }
+
+    void display() {
+        System.out.println(id + " " + name + " " + marks);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        List<Student> students = new ArrayList<>();
+
+        students.add(new Student(1, "Rahul", 85));
+        students.add(new Student(2, "Aman", 65));
+        students.add(new Student(3, "Ravi", 95));
+        students.add(new Student(4, "Neha", 75));
+
+        Collections.sort(students);
+
+        System.out.println("Students sorted by marks:");
+
+        for (Student s : students) {
+            s.display();
+        }
+    }
+}

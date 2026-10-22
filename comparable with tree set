@@ -1,0 +1,31 @@
+
+import java.util.*;
+
+class Product implements Comparable<Product> {
+    int id;
+    int price;
+
+    Product(int id, int price) {
+        this.id = id;
+        this.price = price;
+    }
+
+    @Override
+    public int compareTo(Product p) {
+        return Integer.compare(this.price, p.price);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        TreeSet<Product> products = new TreeSet<>();
+
+        products.add(new Product(1, 500));
+        products.add(new Product(2, 200));
+        products.add(new Product(3, 800));
+
+        for (Product p : products) {
+            System.out.println(p.id + " " + p.price);
+        }
+    }
+}
